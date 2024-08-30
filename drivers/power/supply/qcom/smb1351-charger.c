@@ -1185,7 +1185,7 @@ static int smb1351_get_prop_charge_type(struct smb1351_charger *chip)
 	rc = smb1351_read_reg(chip, STATUS_4_REG, &reg);
 	if (rc) {
 		pr_err("Couldn't read STATUS_4 rc = %d\n", rc);
-		return POWER_SUPPLY_CHARGE_TYPE_USB;
+		return POWER_SUPPLY_CHARGE_TYPE_UNKNOWN;
 	}
 
 	pr_debug("STATUS_4_REG(0x3A)=%x\n", reg);
