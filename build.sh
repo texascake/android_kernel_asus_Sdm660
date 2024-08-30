@@ -4,8 +4,8 @@ KERNELDIR=$(pwd)
 
 # Identity
 CODENAME=Hayzel
-KERNELNAME=TheOneMemory
-VARIANT=HMP
+KERNELNAME=TOM
+VARIANT=EAS
 VERSION=CLO
 
 TG_TOPIC=0
@@ -38,7 +38,7 @@ cd ..
 fi
 
 if ! [ -d "$KERNELDIR/AnyKernel3" ]; then
-if ! git clone --depth=1 https://github.com/Tiktodz/AnyKernel3 -b hmp-old AnyKernel3; then
+if ! git clone --depth=1 https://github.com/Tiktodz/AnyKernel3 -b eas AnyKernel3; then
 exit 1
 fi
 fi
