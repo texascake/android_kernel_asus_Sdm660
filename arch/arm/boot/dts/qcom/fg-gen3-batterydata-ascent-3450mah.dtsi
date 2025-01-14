@@ -17,6 +17,19 @@ qcom,ascent_3450mah {
 	qcom,fastchg-current-ma = <3450>;
 	qcom,batt-id-kohm = <60>;
 	qcom,battery-beta = <3435>;
+	qcom,jeita-fcc-ranges = <0   50   330000
+			51  100  990000
+			101 150  990000
+			151 480  3300000
+			481 620  1650000>;
+	qcom,jeita-fv-ranges =  <0   50   4400000
+			51  100  4400000
+			101 150  4400000
+			151 480  4400000
+			481 620  4100000>;
+	qcom,step-chg-ranges = <3600000  4400000  4400000
+			4001000  4400000  4380000
+			4201000  4400000  4360000>;
 	qcom,battery-type = "ascent_3450mah_averaged_masterslave_jul11th2017";
 	qcom,checksum = <0x7C33>;
 	qcom,gui-version = "PMI8998GUI - 2.0.0.58";
