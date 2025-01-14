@@ -925,22 +925,14 @@ static int usb_icl_vote_callback(struct votable *votable, void *data,
 
 	if (rerun_aicl) {
 		/* set a lower ICL */
-#if defined(CONFIG_MACH_ASUS_X00TD)
 	pval.intval = ONLY_PM660_CURRENT_UA - ICL_STEP_UA, ICL_STEP_UA;
-	else
-#endif
-	pval.intval = max(pval.intval - ICL_STEP_UA, ICL_STEP_UA);
 		power_supply_set_property(chip->main_psy,
 				POWER_SUPPLY_PROP_CURRENT_MAX,
 				&pval);
 	}
 
 	/* set the effective ICL */
-#if defined(CONFIG_MACH_ASUS_X00TD)
 	pval.intval = ONLY_PM660_CURRENT_UA;
-	else
-#endif
-	pval.intval = icl_ua;
 	power_supply_set_property(chip->main_psy,
 			POWER_SUPPLY_PROP_CURRENT_MAX,
 			&pval);
